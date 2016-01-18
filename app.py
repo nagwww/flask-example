@@ -8,9 +8,9 @@ class HelloWorld(Resource):
     def get(self):
         return {'hello': 'world'}
 
-api.add_resource(HelloWorld, '/')
+api.add_resource(HelloWorld, '/status')
 
-@app.route("/status")
+@app.route("/")
 def index():
     return render_template('/index1.html')
 
